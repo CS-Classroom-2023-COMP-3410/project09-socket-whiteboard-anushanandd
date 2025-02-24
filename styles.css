@@ -1,0 +1,149 @@
+:root {
+	--primary-color: #3498db;
+	--secondary-color: #2980b9;
+	--background-color: #f5f6fa;
+	--control-bg: #ffffff;
+	--border-color: #dcdde1;
+	--text-color: #2d3436;
+	--shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+	margin: 0;
+	padding: 20px;
+	font-family: 'Arial', sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-color);
+  }
+  
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  .whiteboard-container {
+	background: var(--control-bg);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: var(--shadow);
+  }
+  
+  #whiteboard {
+	border: 2px solid var(--border-color);
+	border-radius: 4px;
+	cursor: crosshair;
+	background-color: white;
+	display: block;
+	margin: 0 auto;
+  }
+  
+  .controls {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 15px;
+	background: var(--control-bg);
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-shadow: var(--shadow);
+  }
+  
+  .control-group {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+  }
+  
+  .control-label {
+	font-size: 14px;
+	font-weight: 500;
+  }
+  
+  #colorPicker {
+	width: 50px;
+	height: 50px;
+	padding: 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  #colorPicker::-webkit-color-swatch-wrapper {
+	padding: 0;
+  }
+  
+  #colorPicker::-webkit-color-swatch {
+	border: 2px solid var(--border-color);
+	border-radius: 4px;
+  }
+  
+  #brushSize {
+	width: 120px;
+	height: 8px;
+	border-radius: 4px;
+	background: var(--border-color);
+	outline: none;
+  }
+  
+  #brushSize::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	width: 20px;
+	height: 20px;
+	background: var(--primary-color);
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background 0.2s;
+  }
+  
+  #brushSize::-webkit-slider-thumb:hover {
+	background: var(--secondary-color);
+  }
+  
+  #brushSizeValue {
+	min-width: 45px;
+	font-size: 14px;
+	color: var(--text-color);
+  }
+  
+  button {
+	padding: 8px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	color: white;
+	background-color: var(--primary-color);
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.2s;
+  }
+  
+  button:hover {
+	background-color: var(--secondary-color);
+  }
+  
+  .status {
+	margin-top: 15px;
+	padding: 10px;
+	border-radius: 4px;
+	font-size: 14px;
+	text-align: center;
+	background-color: var(--control-bg);
+	color: var(--text-color);
+  }
+  
+  @media (max-width: 768px) {
+	.controls {
+	  flex-direction: column;
+	  align-items: stretch;
+	}
+	
+	.control-group {
+	  justify-content: center;
+	}
+	
+	#whiteboard {
+	  width: 100%;
+	  height: auto;
+	}
+  }
